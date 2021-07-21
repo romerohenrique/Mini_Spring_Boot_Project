@@ -6,6 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+/**
+ * Aula by Prof. Nélio
+ */
 @SpringBootApplication
 public class SpringbootApplication implements CommandLineRunner {
 //usando previamente a interface commandLineRunner para startar um objeto category .
