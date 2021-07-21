@@ -1,12 +1,18 @@
 package com.miniprojectspringboot.springboot.entities;
 
-import java.io.Serializable;
-import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 public class Category implements Serializable {
     private Long id;
     private String name;
+
+    @JsonIgnore
+    private List<Product> products = new ArrayList<>();
 
     public Category() {
     }
@@ -43,5 +49,13 @@ public class Category implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 }
