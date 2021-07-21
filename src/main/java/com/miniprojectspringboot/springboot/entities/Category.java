@@ -15,7 +15,7 @@ public class Category implements Serializable {
     private Long id;
     private String name;
 
-    @JsonIgnore
+    @JsonIgnore//faz com que a List de products não serialize
     @OneToMany(mappedBy = "category")
     private List<Product> products = new ArrayList<>();
 
